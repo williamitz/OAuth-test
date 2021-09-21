@@ -1,0 +1,71 @@
+<mat-toolbar color="warn" class="toolbar">
+  <div class="header">
+      <div class="header__logoMinisterio">
+        <img src="/assets/images/logo_ministerio.png" alt="">
+      </div>
+
+      <div class="header__perueduca">
+        <a class="header__perueduca-img" routerLink="/">
+          <img src="/assets/images/logo_perueduca.png" />
+        </a>
+        <p class="header__perueduca-paragraph">Aula virtual</p>
+      </div>
+
+      <!-- <div class="header__paragraph">
+      </div> -->
+
+    <!-- <span class="spacer"></span> -->
+      <div class="header__buttom">
+        <div class="header__buttom-Grill">
+          <button mat-icon-button aria-label="apps" >
+            <mat-icon>apps</mat-icon>
+          </button>
+        </div>
+
+        <div class="header__buttom-notifications">
+          <mat-icon matBadge="1" matBadgeSize="medium">notifications</mat-icon>
+        </div>
+
+        <p class="header__buttom-welcome">¡Hola, Fabiola!</p>
+      </div>
+
+      <div class="header__burgger">
+        <button 
+          type="button"
+          aria-label="toggle sidenav" 
+          mat-icon-button 
+          class="btnMenu" 
+          (click)="drawer.toggle(); active()" [ngClass]="{'sidebarActive':isOpened == true}">
+          <mat-icon aria-label="toggle menu" [ngClass]="{'sidebarActiveIcon':isOpened == true}">menu</mat-icon>
+        </button>
+      </div>
+  </div>
+</mat-toolbar>
+
+
+<mat-drawer-container class="example-container" [hasBackdrop]="hasBackdrop">
+  <mat-drawer #drawer class="example-sidenav" mode="over" [opened]="isOpened">
+    <div class="optios-drawer">
+
+      <div class="opt" *ngFor="let draweroption of draweroptions" [routerLink]="draweroption.ruta"
+        routerLinkActive="actopt" [routerLinkActiveOptions]="{exact:true}">
+        <div>
+          <mat-icon>{{draweroption.icon}}</mat-icon>
+          <div> <a>{{draweroption.nombre}}</a></div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <div class="div-contenido">
+      <router-outlet></router-outlet>
+    </div>
+
+  </mat-drawer-content>
+
+
+</mat-drawer-container>

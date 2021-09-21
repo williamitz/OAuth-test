@@ -1,0 +1,244 @@
+@import 'variables';
+
+.container-tabtitle {
+    margin-top: 25px;
+
+    div:first-child {
+        font-family  : $fontbold;
+        font-size    : 24px;
+        margin-bottom: 8px;
+    }
+
+    div:last-child {
+        font-family: $fontnormal;
+        font-size  : 16px;
+    }
+}
+
+
+
+/////
+
+.container_card_write {
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: center;
+}
+
+input:focus {
+    outline: none;
+}
+
+.card-write {
+    max-width       : 714px;
+    min-height      : 209px;
+    background-color: #ffffff;
+    border          : 2px solid rgba(0, 0, 0, 0.12);
+    border-radius   : 10px;
+    margin-top      : 25px;
+    display         : flex;
+    flex-wrap       : wrap;
+
+    input[type="text"] {
+        width    : -webkit-fill-available;
+        border   : none;
+        height   : 35px;
+        padding  : 0px 5px 0px 5px;
+        font-size: 16px;
+        //color: rgba(0, 0, 0, 0.12);
+    }
+
+    input[type="text"]::placeholder {
+        color      : rgba(0, 0, 0, 0.12);
+        font-weight: 600;
+        font-family: $fontbold;
+    }
+
+    input[type="file"] {
+        display: none;
+    }
+}
+
+.mat-divider {
+    width           : 100%;
+    border-top-width: 5px;
+}
+
+.dates-user {
+    display      : flex;
+    flex-wrap    : wrap;
+    align-items  : center;
+    margin-bottom: 15px;
+    padding      : 5px 5px 0px 5px;
+    font-size    : 16px;
+
+    * {
+        margin-right: 10px;
+    }
+
+    div {
+        font-family: $fontbold;
+        color      : #2F3B55;
+    }
+
+    div:last-child {
+        font-family: $fontnormal;
+        color      : rgba(0, 0, 0, 0.12);
+    }
+}
+
+.block-card2 {
+    width          : 100%;
+    display        : flex;
+    flex-wrap      : wrap;
+    padding        : 0px 10px 5px;
+    justify-content: space-between;
+    align-items    : center;
+    min-height     : 40px;
+
+    button {
+        width        : 140px;
+        height       : 48px;
+        background   : #237EF2;
+        font-size    : 18px;
+        color        : #FFFFFF;
+        border       : none;
+        border-radius: 6px;
+        cursor       : pointer;
+        box-shadow   : 0px 4px 0px #1956a4;
+        font-family  : Gotham Rounded Bold;
+        font-size    : 18px;
+    }
+}
+
+.container-iconstab {
+    display    : flex;
+    align-items: center;
+
+    * {
+        cursor: pointer;
+    }
+
+    label {
+        width       : 24px;
+        height      : 24px;
+        margin-right: 5px;
+    }
+
+    img:last-child {
+        width       : 24px;
+        height      : 24px;
+        margin-right: 5px;
+    }
+
+}
+
+.container_posts {
+    width          : 100%;
+    display        : flex;
+    justify-content: center;
+
+    .container_static {
+        width    : 100%;
+        max-width: 718px;
+
+        .mat-divider {
+            height    : 5px;
+            width     : 100%;
+            margin-top: 25px;
+        }
+
+        .mat-form-field-flex {
+            width        : 161px;
+            height       : 40px;
+            border-radius: 6px !important;
+        }
+
+        .container-select {
+            margin-top: 40px;
+        }
+
+        .mat-form-field-underline {
+            display: none;
+        }
+
+        .mat-select-arrow {
+            color: #237EF2;
+        }
+
+        .mat-form-field-type-mat-select:not(.mat-form-field-disabled) .mat-form-field-flex {
+            border          : 1px solid #BEC7D8;
+            background-color: #ffffff;
+        }
+
+        .mat-form-field-appearance-fill .mat-form-field-flex {
+            padding: 0.4em 1em 0 1em;
+        }
+
+        .mat-form-field-infix {
+            border-top: 0;
+        }
+
+        .mat-select-arrow-wrapper {
+            display       : table;
+            vertical-align: middle;
+        }
+
+        .mat-select-value-text {
+            font-size  : 16px;
+            font-family: $fontnormal;
+        }
+
+
+        .container_posts {
+            width          : 100%;
+            display        : flex;
+            justify-content: center;
+            min-height: 250px;
+
+            .content_vacio {
+                width           : 100%;
+                max-width       : 367px;
+                height          : 133px;
+                max-height      : 133px;
+                background-color: #ffffff;
+                display         : flex;
+                flex-wrap       : wrap;
+                justify-content : center;
+                align-items     : center;
+                border-radius: 15px;
+                div{
+                    width: 100%;
+                    text-align: center;
+                    font-size: 16px;
+                    font-family: $fontnormal;
+                    position: relative;
+                    top: -10px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+@media (min-width:768px) {
+
+    .dates-user {
+        padding: 10px 20px 0px 20px;
+    }
+
+    .block-card2 {
+        padding   : 0px 20px 5px 20px;
+        margin-top: -20px;
+    }
+
+    .card-write {
+        input[type="text"] {
+            padding: 0px 20px 0px 20px;
+        }
+
+    }
+}

@@ -1,0 +1,88 @@
+<div class="contenedor-misaulas">
+
+  <div class="div-titleComponent">
+    <img src="/assets/images/logo-misaulas.png">
+    <div class="text-title">Mis aulas</div>
+  </div>
+
+
+  <div class="div-crearaula-02">
+    <button (click)="openDialog()" class="btnaula">Crear aula</button>
+  </div>
+   <div class="bar" *ngIf="aulasplice.length > 0"></div> 
+</div>
+<app-crear-aula 
+  [ngClass]="[isOpen ? 'modal__wrapper is-open' : 'modal__wrapper']"
+  (onClose) = "handleClose( $event )"
+  (onDataForm) = "handleSave( $event )"
+>
+</app-crear-aula>
+
+<div class="contenido-misAulas">
+  <div class="div-unirme" *ngIf="aulasplice.length===0">
+    <div class="div-imgUnirme"><img src="/assets/images/logo-unirme.png" alt=""></div>
+    <div class="div-buttonunirme">
+      <button class="btnaula">Unirme al aula</button>
+    </div>
+
+    <div class="text-unirme">
+      Las aulas te ayudarán a desarrollar tus actividades de forma organizada.
+    </div>
+  </div>
+  <div class="div-Aulas" *ngIf="aulasplice.length > 0">
+
+    <div class="div-IE">
+      <div class="div-dates-IE">
+        <div class="name-IE">I.E Melitón Carvajal</div>
+        <div>EBR, Secundaria</div>
+      </div>
+      <div class="div-btn-optIE">
+        <button mat-button class="btn-otpIE">
+          <mat-icon [matMenuTriggerFor]="menuIE">more_vert</mat-icon>
+        </button>
+        <mat-menu #menuIE="matMenu">
+          <button mat-menu-item>Item 1</button>
+          <button mat-menu-item>Item 2</button>
+        </mat-menu>
+      </div>
+    </div>
+
+    <div class="div-cards" 
+    infiniteScroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="50"
+    (scrolled)="onScroll()"
+    [infiniteScrollDisabled]="isFullListDisplayed"
+    [scrollWindow]="false">
+    <div class="Blockquote" *ngFor="let aula of aulasplice; let index=index">
+      <div class="div-first-bl">
+        <div>{{aula?aula?.titulo:''}}</div>
+        <div>
+          <button mat-button>
+            <mat-icon [matMenuTriggerFor]="menu">more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="edit(aula.id)">Editar</button>
+            <button mat-menu-item (click)="delete(index)">Eliminar</button>
+          </mat-menu>
+        </div>
+      </div>
+      <div>{{aula?aula?.description:''}}
+      </div>
+    </div>
+  </div>
+    <div style="width: 100%;margin-bottom: 100px;">
+      <!-- <mat-paginator fixed [length]="aulas.length"
+      [pageSize]="6"
+      [pageSizeOptions]="[6]"
+      (page)="onchangePages($event)">
+    </mat-paginator> -->
+    
+  </div>
+  </div>
+
+</div>
+
+
+
+

@@ -1,0 +1,37 @@
+<div class="container-frag1">
+
+  <div class="container-headedit">
+
+    <div (click)="returnaulas()">
+      <mat-icon>chevron_left</mat-icon>
+    </div>
+    <div class="option-01-h" (click)="returnaulas()">Mis aulas</div>
+    <div>></div>
+    <div class="option-02-h">Comunicación y otras áreas</div>
+
+  </div>
+
+</div>
+
+<div class="container-02">
+  <div class="container-title-edit-aula" *ngFor="let dato of aula">
+    <div>{{dato?.titulo}}</div>
+    <div>{{dato?.description}}</div>
+  </div>
+
+  <!-- <div class="container-compartir-cod">
+    <div>
+      <mat-icon>open_in_new</mat-icon> Compartir código
+    </div>
+    <div>FGD345</div>
+  </div> -->
+</div>
+
+<mat-tab-group>
+  <mat-tab label="Comunicados">
+    <app-comunicados></app-comunicados>
+  </mat-tab>
+  <mat-tab label="Aprendizaje"> Content 2 </mat-tab>
+  <mat-tab label="Evaluaciones"> Content 3 </mat-tab>
+  <mat-tab label="Participantes"> Content 4</mat-tab>
+</mat-tab-group>

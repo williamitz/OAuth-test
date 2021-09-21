@@ -1,0 +1,474 @@
+.contenedor-misaulas {
+    margin-top: 100px;
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: center;
+}
+
+.div-titleComponent{
+    display        : flex;
+    width          : 100%;
+    justify-content: center;
+    margin-bottom  : 15px;
+}
+
+.text-title {
+    font-family: Gotham Rounded Bold;
+    font-style : normal;
+    font-weight: bold;
+    font-size  : 32px;
+    display    : flex;
+    flex-wrap  : wrap;
+    align-items: center;
+    margin-left: 25px;
+}
+
+.bar {
+    display         : flex;
+    width           : 100%;
+    height          : 2px;
+    background-color: #BEC7D8;
+    margin-top      : 30px;
+}
+
+.contenido-misAulas {
+    padding        : 10px;
+    display        : flex;
+    justify-content: center;
+}
+
+.div-unirme {
+    position  : absolute;
+    margin-top: 128px;
+    height: 400px;
+    background: #FFFFFF;
+    box-shadow   : 0px 2px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+}
+
+.div-imgUnirme {
+    width          : 100%;
+    display        : flex;
+    justify-content: center;
+    margin-top     : 107px;
+}
+
+.div-imgUnirme img{
+   cursor: pointer;
+}
+
+.div-buttonunirme {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    margin-top     : 31px;
+}
+
+.btnaula {
+    width        : 172px;
+    height       : 46px;
+    background   : #237EF2;
+    font-size    : 18px;
+    color        : #FFFFFF;
+    border       : none;
+    border-radius: 6px;
+    cursor       : pointer;
+    box-shadow   : 0px 6px 0px #1956a4;
+    font-family  : Gotham Rounded Bold;
+    font-weight  : 700;
+    font-size    : 18px;
+}
+
+.modal__wrapper {
+    position  : fixed;
+    top       : 0;
+    bottom    : 0;
+    left      : 0;
+    right     : 0;
+    opacity   : 0;
+    height    : 100vh;
+    width     : 100vw;
+    visibility: hidden;
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    z-index   : 9;
+}
+  
+.modal__overlay {
+    background: rgba(0, 0, 0, 0.6);
+    height    : 100%;
+    width     : 100%;
+    position  : absolute;
+}
+  
+.modal__container {
+    position   : absolute;
+    background : #FFFFFF;
+    width      : 40%;
+    max-width  : 70%;
+    font-family: Gotham Rounded Bold;
+    position   : absolute;
+    left       : 50%;
+    top        : 50%;
+    transform  : translate(-50%, -50%);
+    transition : visibilty 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+  
+.modal__container-close {
+    border-radius: 4px;
+    cursor       : pointer;
+    margin-left  : 86%;
+    margin-top   : 27px;
+    height       : 14px;
+    width        : 14px;
+    transition   : 0.1s ease-in-out;
+}
+  
+.modal__wrapper .modal__container {
+    height   : 100%;
+    max-width: 100%;
+    width    : 100%;
+}
+
+.modal__header {
+    align-items    : start;
+    border-bottom  : 1px solid #BEC7D8;
+    display        : flex;
+    justify-content: center;
+    padding-bottom : 16px;
+}
+  
+.modal__header-logo {
+    display   : none;
+    height    : 54px;
+    margin-top: 5px;
+    width     : 66px;
+} 
+
+.modal__header-title {
+    color      : #2f3b55;
+    font-size  : 24px;
+    font-weight: 400;
+}
+  
+  
+.modal__header-close h6 {
+    margin     : 0;
+    font-size  : 16px;
+    line-height: 1;
+}
+  
+.modal__body {
+    padding    : 16px;
+    font-size  : 14px;
+    line-height: 21px;
+    max-height : 320;
+    height     : auto;
+    overflow-y : auto;
+    color      : #000000;
+}
+  
+.modal__body-label {
+    color        : #111828;
+}
+
+.modal__body-select {
+    display: block;
+    font-size: 16px;
+    font-family: Gotham Rounded;
+    font-weight: 400;
+    color: #9FACC9;
+    line-height: 1.3;
+    padding: .4em 1.4em .3em .8em;
+    height       : 48px;
+    width        : 99.5%;
+    max-width: 100%; 
+    box-sizing: border-box;
+    margin: 6px 0 16px;
+    border: 1px solid #BEC7D8;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.03);
+    border-radius: 6px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+      linear-gradient(to bottom, #ffffff 0%,#fff 100%);
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+}
+  
+.modal__body-input {
+    border       : 1px solid #BEC7D8;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    margin-top   : 6px;
+    height       : 48px;
+    width        : 98%;
+}
+ 
+.modal__body input::placeholder {
+    color        : #9FACC9;
+    font-family  : Gotham Rounded;
+    font-size    : 16px;
+    left         : 20px;
+    position     : absolute;
+    top          : 19px;
+}
+  
+.modal__footer {
+    align-items    : center;
+    display        : flex;
+    justify-content: space-around;
+    margin         : 40px 10px;
+}
+  
+.modal__footer button {
+    background-color: #F3F6FB;
+    border          : none;
+    border-radius   : 6px;
+    box-shadow      : 0px 5px 0px #DFDFDF;
+    color           : #237EF2;
+    font-size       : 18px;
+    padding         : 14px;
+    width           : 140px;
+}
+  
+.modal__footer button:last-child {
+    background-color: #237EF2;
+    box-shadow      : 0px 5px 0px #0058a4;
+    color           : #FAFAFA;
+}
+  
+.is-open {
+    opacity   : 1;
+    visibility: visible;
+    transition: visibility 0s linear 0s, opacity 0.5s 0s, transform 0.5s;
+}
+  
+.is-open .modal__container {
+    transform: translate(-50%, -50%);
+}
+   
+.text-unirme {
+    padding    : 0px 24px 0px 23px;
+    display    : flex;
+    flex-wrap  : wrap;
+    text-align : center;
+    color      : #333333;
+    margin-top : 11px;
+    font-size  : 16px;
+    font-family: Gotham Rounded;
+}
+
+.div-cards{
+    display: flex;
+    flex-wrap: wrap;
+    height: 1050px;
+    justify-content: center;
+    overflow: scroll;
+}
+
+.Blockquote{
+    display      : flex;
+    flex-wrap    : wrap;
+    width        : 100%;
+    min-height   : 150px;
+    background   : #FFFFFF;
+    border-left  : 6px solid #7669DB;
+    color        : #2F3B55;
+    font-style   : normal;
+    padding      : 5px 0px;
+    display      : flex;
+    border-radius: 6px 0px 0px 6px;
+    font-family  : Gotham Rounded;
+    margin-bottom: 15px;
+}
+
+.Blockquote div{
+    margin-left: 5px;
+}
+
+.Blockquote button{
+    border          : none;
+    background-color: transparent;
+}
+
+.Blockquote button mat-icon{
+    color: #2F3B55;
+    cursor: pointer;
+}
+
+.div-first-bl{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div-Aulas{
+    width          : 100%;
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: center;
+}
+
+.div-IE{
+    width          : 100%;
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: space-evenly;
+    align-items    : center;
+    margin-top     : 15px;
+    margin-bottom  : 50px;
+    font-family    : Gotham Rounded;
+    font-size      : 16px;
+}
+
+.btn-otpIE{
+    background-color: transparent;
+    border-radius   : 5px;
+    border          : 1px solid #2F3B55;
+    width           : 40px;
+    height          : 100%;
+    cursor          : pointer;
+}
+
+.btn-otpIE mat-icon{
+    color    : #2F3B55;
+    width    : 25px;
+    height   : 25px;
+    font-size: 25px;
+}
+
+.div-btn-optIE{
+    height: 100%;
+}
+
+.name-IE{
+    font-family: Gotham Rounded Bold;
+    font-size  : 18px;
+}
+
+@media(min-width:375px){
+    .Blockquote{
+        width  : 300px;
+        margin : 1em 0 1.5em;
+        padding: 1em 1.5em;
+    }
+}
+
+@media (min-width:400px) {
+    .div-unirme {
+        width: 400px;
+    }
+}
+
+@media (min-width:428px) {
+    .contenedor-misaulas {
+        margin-top: 80px;
+    }
+  }
+
+@media (min-width:768px) {
+    .div-cards{
+        justify-content: left;
+        height: 1278px;
+    }
+    .contenedor-misaulas {
+        margin-top: 40px;
+    }
+    .Blockquote{
+        margin-right: 30px;
+        max-height: 150px;
+    }
+    .div-titleComponent{
+        width        : auto;
+        margin-bottom: 0;
+    }
+    .div-Aulas{
+        justify-content: left;
+    }
+    .div-IE{
+        justify-content: left;
+    }
+    .div-dates-IE{
+        margin-right: 15px;
+    }
+    .contenedor-misaulas {
+        justify-content: space-between;
+    }
+    .div-crearaula-02{
+        display    : flex;
+        align-items: center;
+       
+    }
+
+    .contenedor-misaulas {
+        margin-right: 21px;
+    }
+
+    .modal__container {
+        border-radius: 20px;
+    }
+    
+    .modal__wrapper .modal__container {
+        height: 534px;
+        width : 40%;
+    }
+    
+    .modal__header {
+        align-items    : center;
+        border-bottom  : none;
+        justify-content: start;
+        margin-left    : 48px;
+        padding-bottom : 0;
+    }
+    
+    .modal__header-logo {
+        display   : inline-block;
+        height    : 54px;
+        margin-top: 5px;
+        width     : 66px;
+    }
+    
+    .modal__header-title {
+        margin-left: 26px;
+    }
+    
+    .modal__body {
+        padding: 16px 48px;
+    }
+
+    .modal__footer {
+        align-items    : center;
+        justify-content: space-evenly;
+        margin         : 0;
+    }
+
+}
+
+@media (min-width:1000px) {
+    .modal__footer {
+        align-items    : center;
+        justify-content: end;
+        margin         : 0 48px 0 0;
+    }
+
+    .modal__footer button:last-child {
+        margin-left: 22px;
+    }
+}
+
+@media (min-width:1024px){
+    .div-cards{
+        height: 639px;
+    }
+}
+
+@media (min-width:1440px) {
+    .div-cards{
+        height: 426px;
+    }
+}

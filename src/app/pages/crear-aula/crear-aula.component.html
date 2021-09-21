@@ -1,0 +1,106 @@
+<!-- <div > -->
+    <div class="modal__overlay">
+        <div class="modal__container">
+            <div class="modal__container-close" (click)="handleCancel()">
+                <img src="./assets/images/close.svg" alt="close button" />
+            </div>
+            <div *ngIf="isOpenForm">
+                <div class="modal__header">
+                    <div class="modal__header-logo"><img src="/assets/images/logo_alumnos.png"></div>
+                    <div class="modal__header-title"><h1>Primero, agrega la información de tu I.E.</h1></div>
+                    <div class="modal__header-subtitle"><h2>solo te pediremos estos datos una única vez.</h2></div>
+                </div>
+        
+                <div class="modal__body">
+                    <form autocomplete="off" [formGroup]="dataSchool" (ngSubmit)="guardar()">
+                        <div  >
+                        <!-- <label class="modal__body-label">Institución educativa</label> -->
+                        <label [ngClass]="[validateSchool('institucion') ? 'modal__body-label modal__body-invalidSelect' : 'modal__body-label']" >Institución educativa</label>
+                        <input 
+                            [ngClass]="[validateSchool('institucion') ? 'modal__body-input-search modal__body-invalidInput' : 'modal__body-input-search']"
+                            type="text" 
+                            name="input"
+                            formControlName="institucion"
+                            value="|touppercase"
+                            placeholder="Buscar institución"
+                        >
+                        </div>
+            
+                        <div >
+                        <label [ngClass]="[validateSchool('modalidad') ? 'modal__body-label modal__body-invalidSelect' : 'modal__body-label']">Modalidad</label>
+                        <select 
+                            [ngClass]="[validateSchool('modalidad') ? 'modal__body-select modal__body-invalidInput' : 'modal__body-select']"
+                            formControlName="modalidad"
+                        >
+                            <option value="">Selecciona</option>
+                            <option *ngFor="let modalidad of modalidades"
+                            [value]="modalidad | lowercase"> {{ modalidad | uppercase }}</option>
+                        </select>
+                        </div>
+            
+                        <div >
+                        <label [ngClass]="[validateSchool('nivel') ? 'modal__body-label modal__body-invalidSelect' : 'modal__body-label']">Nivel</label>
+                        <select
+                            [ngClass]="[validateSchool('nivel') ? 'modal__body-select modal__body-invalidInput' : 'modal__body-select']"
+                            formControlName="nivel"
+                        >
+                            <option value="">Selecciona</option>
+                            <option *ngFor="let nivel of niveles"
+                            [value]="nivel"> {{ nivel | uppercase }}</option>
+                        </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal__footer">
+                    <button (click)="handleCancel()">Cancelar</button>
+                    <button (click)="handleContinue()">Continuar</button>
+                </div>
+            </div>
+            <div *ngIf="isOpenForm2">
+                <div class="modal__header">
+                    <div class="modal__header-logo"><img src="/assets/images/logo-misaulas.png"></div>
+                    <div class="modal__header-title">Crear nueva aula</div>
+                </div>
+        
+                <div class="modal__body">
+                    <form autocomplete="off" [formGroup]="dataClassroom" (ngSubmit)="guardar()" class="modal__body-form">
+                        <label [ngClass]="[validateClassroom('titulo') ? 'modal__body-label modal__body-invalidSelect' : 'modal__body-label']">Grado</label>
+                        <select 
+                            [ngClass]="[validateClassroom('titulo') ? 'modal__body-select modal__body-invalidInput' : 'modal__body-select']"
+                            formControlName="titulo"
+                        >
+                            <option value="">Selecciona</option>
+                            <option *ngFor="let grado of grados"
+                            [value]="grado"> {{ grado }}</option>
+                        </select>
+            
+                        <label [ngClass]="[validateClassroom('seccion') ? 'modal__body-label modal__body-invalidSelect' : 'modal__body-label']">Sección</label>
+                        <input  
+                            [ngClass]="[validateClassroom('seccion') ? 'modal__body-input modal__body-invalidInput' : 'modal__body-input']"
+                            formControlName="seccion"
+                            placeholder="Identifica tu aula"
+                            type="text"
+                        >
+            
+                        <label [ngClass]="[validateClassroom('description') ? 'modal__body-label modal__body-invalidSelect' : 'modal__body-label']">Áreas</label>
+                        <select 
+                            class="modal__body-select"
+                            [ngClass]="[validateClassroom('description') ? 'modal__body-select modal__body-invalidInput' : 'modal__body-select']"
+                            formControlName="description"
+                        >
+                            <option value="">Selecciona</option>
+                            <option value="item 1">Item 1</option>
+                            <option value="item 2">Item 2</option>
+                            <option value="item 3">Item 3</option>
+                        </select>
+                        
+                    </form>
+                </div>
+                <div class="modal__footer">
+                    <button (click)="handleBehind()">Atrás</button>
+                    <button (click)="guardar()" type="submit">Crear Aula</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- </div> -->

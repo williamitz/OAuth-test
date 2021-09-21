@@ -1,0 +1,63 @@
+<div class="container-tabtitle">
+    <div>Comunicados</div>
+    <div>Envía información a tus estudiantes y sus familias.</div>
+</div>
+
+<div class="container_card_write">
+    <div class="card-write">
+        <div class="dates-user">
+            <img src="../../../../assets/images/Ellipse 9.png" alt="">
+            <div>Fabiola Valencia</div>
+            <div>(Docente)</div>
+        </div>
+
+        <input type="text" placeholder="¿Que quieres comunicarle a tu aula?">
+        <mat-divider></mat-divider>
+
+        <div class="block-card2">
+            <div class="container-iconstab">
+                <input type="file" id="file" accept="image/*">
+                <label for="file"><img src="../../../../assets//images/picture.png" alt=""></label>
+                <img src="../../../../assets//images/voice.png" alt="">
+            </div>
+
+            <div>
+                <button>Publicar</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container_posts">
+
+    <div class="container_static">
+        <div>
+            <mat-divider></mat-divider>
+        </div>
+        <div class="container-select">
+            <mat-form-field appearance="fill">
+                <mat-select [(ngModel)]="selectedValue" name="food">
+                    <mat-option *ngFor="let mes of meses" [value]="mes.value">
+                        {{mes.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+
+        <div class="container_posts">
+            <div class="content_vacio">
+                <img src="../../../../assets/images/Group 12860.png" alt="">
+                <div>No hay ningún comunicado este mes</div>
+            </div>
+
+
+            
+
+        </div>
+
+    </div>
+
+
+</div>

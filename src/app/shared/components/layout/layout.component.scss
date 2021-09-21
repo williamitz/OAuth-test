@@ -1,0 +1,380 @@
+.toolbar {
+  // position: inherit !important;
+}
+.header {
+  align-items: center;
+  // column-gap: 9%;
+  display: grid;
+  // grid-template-columns: repeat(4, 1fr);
+  // grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding: 15px 0;
+  width: 100%;
+  // flex-wrap      : wrap;
+  // align-items    : center;
+  // justify-content: center;
+  // margin-top     : 5px;
+  &__logoMinisterio {
+    grid-area: 1 / 1 / 2 / 3;
+    & img {
+      height: 41px;
+      width: 175px;
+    }
+  }
+  &__perueduca {
+    grid-area: 1 / 3 / 2 / 5;
+    padding-left: 20%;
+    & a {
+      & img {
+        height: 26px;
+        width: 145px;
+      // margin-left: 22px;
+
+      }
+    }
+    &-paragraph {
+      display: none;
+    }
+  }
+  // &__paragraph {
+  // }
+  &__buttom {
+    align-items: center;
+    display: flex;
+    grid-area: 2 / 1 / 3 / 4;
+    justify-content: space-between;
+    // margin-top: 8px;
+    &-Grill {
+      // margin-top: 5px;
+      & button {
+        align-items: center;
+        border-radius: 10px;
+        border: none;
+        display: flex;
+        padding: 8px;
+      }
+    }
+    &-notifications {
+      margin-top: 12px;
+    }
+    & p {
+      margin: 0;
+    }
+  }
+  // &__notifications {
+  //   grid-area: 2 / 2 / 3 / 3;
+  //   margin-top: 12px;
+  // }
+  // &__welcome {
+  //   grid-area: 2 / 3 / 3 / 4;
+  //   & p {
+  //     margin: 0px;
+  //   }
+  // }
+  &__burgger {
+    display: flex;
+    grid-area: 2 / 4 / 3 / 5;
+    justify-content: end;
+  }
+  
+}
+
+.mat-drawer-content {
+  //margin-top: 73px;
+  position: initial !important;
+}
+
+.mat-toolbar.mat-warn {
+  color           : #2F3B55;
+  background-color: #ffffff;
+  display         : flex;
+  flex-wrap       : wrap;
+  height          : auto;
+  position: inherit;
+  // z-index: 5;
+}
+
+.btnMenu {
+  width           : 47px;
+  height          : 43px;
+  background-color: #F3F6FB;
+  border          : none;
+  border-radius   : 11px;
+  cursor          : pointer;
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  margin-right    : 5px;
+}
+
+.btnMenu mat-icon {
+  color: #2F3B55;
+  height: 30px;
+    width: 30px;
+    font-size: 30px;
+}
+
+.btnApp {
+  width           : 47px;
+  height          : 43px;
+  background-color: #F3F6FB;
+  border          : none;
+  border-radius   : 11px;
+  cursor          : pointer;
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+}
+
+.btnApp mat-icon {
+  color: #2F3B55;
+}
+
+.mat-badge-content {
+  background: #646c84
+}
+
+.BadgeNotification {
+  color: #646c84
+}
+
+.example-container {
+  /*width: 500px;
+    height: 300px;*/
+  width : 100%;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.example-sidenav-content {
+  display        : flex;
+  height         : 100%;
+  align-items    : center;
+  justify-content: center;
+}
+
+.example-sidenav {
+  width          : 120px;
+  justify-content: center;
+}
+
+.logo p {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  color      : #2F3B55;
+  font-size  : 20px;
+}
+
+.section-mt1 {
+  width          : 100%;
+  display        : flex;
+  flex-wrap      : wrap;
+  justify-content: space-evenly;
+  align-items    : center;
+  margin-bottom  : 10px;
+}
+
+.div-img-logoMinisterio {
+  width     : 100%;
+  text-align: center;
+  display   : none;
+}
+
+.logo a {
+  display: flex;
+}
+
+.mat-drawer.mat-drawer-over {
+  background-color: #7669DB;
+  color           : #FFFFFF;
+  // margin-top: 144px;
+}
+
+.optios-drawer {
+  margin-top: 20px;
+}
+
+.optios-drawer .opt {
+  width          : 104px;
+  height         : 104px;
+  display        : flex;
+  flex-wrap      : wrap;
+  justify-content: center;
+  align-items    : center;
+  cursor         : pointer;
+}
+
+.optios-drawer .opt:focus{
+  outline: none;
+}
+
+.opt div {
+  text-align: center;
+}
+
+.mat-drawer-inner-container {
+  display        : flex;
+  justify-content: center;
+}
+
+.optios-drawer .mat-icon {
+  height   : 35px;
+  width    : 35px;
+  font-size: 35px;
+}
+
+.div-contenido {
+  margin-top: 20px;
+  padding: 5px;
+}
+
+.actopt {
+  background   : #6454d4;
+  border-radius: 12px;
+}
+
+
+
+@media (min-width:768px) {
+  .header {
+    column-gap: 0;
+    justify-items: center;
+    grid-template-columns: 8% 37% 33% 22%;
+    grid-template-rows: 1fr;
+    padding: 5px 0;
+    &__logoMinisterio {
+      grid-area: 1 / 4 / 2 / 5;
+      margin-top: 10px;
+    }
+    &__perueduca {
+      align-items: center;
+      display: flex;
+      grid-area: 1 / 2 / 2 / 3;
+      margin-top: 10px;
+      padding-left: 0;
+      & p {
+        border-left: 2px solid red;
+        display: block;
+        margin-bottom: 10px;
+        padding-left: 15px;
+      }
+    }
+    &__buttom {
+      grid-area: 1 / 3 / 2 / 4;
+      justify-content: space-evenly;
+      width: 100%;
+    }
+    // &__paragraph {
+    //   grid-area: 1 / 3 / 2 / 4;
+    //   & p {
+    //   }
+    // }
+    // &__Grill {
+    //   grid-area: 1 / 4 / 2 / 5; 
+    // }
+    // &__notifications {
+    //   grid-area: 1 / 5 / 2 / 6;
+    //   margin-top: 15px;
+    // }
+    // &__welcome {
+    //   grid-area: 1 / 6 / 2 / 7;
+    // }
+    &__burgger {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+  }
+  .mat-drawer.mat-drawer-over {
+    margin-top: 0px;
+}
+  .section-mt1 {
+    width        : 40%;
+    margin-bottom: 0;
+  }
+
+  .mat-toolbar.mat-warn {
+    justify-content: space-between;
+    height         : 72px;
+  }
+
+  .logo p {
+    margin-bottom: 4px;
+  }
+
+  .div-contenido {
+    margin-left: 150px;
+    margin-right: 50px;
+  }
+}
+
+.sidebarActive{
+  background-color: #2c3c54;
+}
+
+.sidebarActiveIcon{
+  color: #ccccd4 !important;
+}
+
+@media (min-width:1024px) {
+  .header {
+    grid-template-columns: 5% 48% 30% 17%;
+    &__perueduca {
+      margin-right: 30%;
+    }
+    &__buttom {
+      justify-content: space-evenly;
+    }
+    &__burgger {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+  }
+  .section-mt1 {
+    width: auto;
+  }
+
+  .section-mt1 button {
+    margin: 0px 10px;
+  }
+
+  .section-mt1 .mat-icon {
+    margin   : 0px 10px;
+    font-size: 35px;
+    height   : 35px;
+    width    : 35px;
+  }
+
+  .section-mt1 div {
+    margin: 0px 10px;
+  }
+
+  .div-img-logoMinisterio {
+    width  : auto;
+    display: unset;
+  }
+
+  .optios-drawer {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width:1440px) {
+
+  .mat-toolbar-row,
+  .mat-toolbar-single-row {
+    padding: 0 !important;
+  }
+
+  .div-tootlebutton {
+    width          : 120px;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+  }
+
+  .div-img-logoMinisterio {
+    margin-right: 64px;
+  }
+
+  .section-mt1 div {
+    margin: 0px 10px 0px 20px;
+  }
+}
